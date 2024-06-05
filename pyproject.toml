@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nillion-python-helpers"
+version = "0.1.0"
+description = ""
+authors = ["José Cabrero-Holgueras <jose.cabrero@nillion.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+py-nillion-client = "^0.2.1"
+python-dotenv = "1.0.0"
+pytest-asyncio = "^0.23.7"
+
+[tool.poetry.scripts]
+bootstrap-local-environment = "nillion_python_helpers.scripts.bootstrap_local_environment:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
