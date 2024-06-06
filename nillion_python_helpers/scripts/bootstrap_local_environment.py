@@ -100,8 +100,8 @@ def main():
     # for var in [NILLION_DEVNET, NILLION_CLI]:
     #     print(f"ℹ️ found bin {var:<18} -> [{os.getenv(var, f'Failed to discover {var}')}]")
 
-    outfile = tempfile.mktemp()
-    pidfile = tempfile.mktemp()
+    outfile = tempfile.mkstemp()[1]
+    pidfile = tempfile.mkstemp()[1]
     print("OUTFILE", outfile)
     print("PIDFILE", pidfile)
 
@@ -189,7 +189,7 @@ def main():
 
     # Generate node keys and add to .env
     for i in range(1, num_node_keys + 1):
-        nodekey_file = tempfile.mktemp()
+        nodekey_file = tempfile.mkstemp()[1]
         run_command([NILLION_CLI, NILLION_CLI_COMMAND_NODE_KEYGEN, nodekey_file])
         update_env(f"NILLION_NODEKEY_PATH_PARTY_{i}", nodekey_file, ENV_TO_UPDATE)
         update_env(
@@ -200,7 +200,7 @@ def main():
 
     # Generate user keys and add to .env
     for i in range(1, num_user_keys + 1):
-        userkey_file = tempfile.mktemp()
+        userkey_file = tempfile.mkstemp()[1]
         run_command([NILLION_CLI, NILLION_CLI_COMMAND_USER_KEYGEN, userkey_file])
         update_env(f"NILLION_USERKEY_PATH_PARTY_{i}", userkey_file, ENV_TO_UPDATE)
         update_env(
