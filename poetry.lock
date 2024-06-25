@@ -410,13 +410,13 @@ files = [
 
 [[package]]
 name = "packaging"
-version = "24.0"
+version = "24.1"
 description = "Core utilities for Python packages"
 optional = false
-python-versions = ">=3.7"
+python-versions = ">=3.8"
 files = [
-    {file = "packaging-24.0-py3-none-any.whl", hash = "sha256:2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5"},
-    {file = "packaging-24.0.tar.gz", hash = "sha256:eb82c5e3e56209074766e6885bb04b8c38a0c015d0a30036ebe7ece34c9989e9"},
+    {file = "packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124"},
+    {file = "packaging-24.1.tar.gz", hash = "sha256:026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002"},
 ]
 
 [[package]]
@@ -480,22 +480,6 @@ files = [
     {file = "protobuf-4.25.3-py3-none-any.whl", hash = "sha256:f0700d54bcf45424477e46a9f0944155b46fb0639d69728739c0e47bab83f2b9"},
     {file = "protobuf-4.25.3.tar.gz", hash = "sha256:25b5d0b42fd000320bd7830b349e3b696435f3b329810427a6bcce6a5492cc5c"},
 ]
-
-[[package]]
-name = "py-nillion-client"
-version = "0.2.1"
-description = "Python client for Nillion network and utilities."
-optional = false
-python-versions = ">=3.10"
-files = [
-    {file = "py_nillion_client-0.2.1-cp37-abi3-macosx_10_12_x86_64.whl", hash = "sha256:badc041dce6a3faf4ae26cd27992d67a06fa0fdd747196900560e0fb24806c09"},
-    {file = "py_nillion_client-0.2.1-cp37-abi3-macosx_11_0_arm64.whl", hash = "sha256:6b4d9e1b8426c55db9ebbdcae640803d1e326daebd4bef83252d6933af84d94e"},
-    {file = "py_nillion_client-0.2.1-cp37-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8bd848896dee63def40c1871f6a43ffe513016c0ef319333fa5430c16f0444d3"},
-    {file = "py_nillion_client-0.2.1-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2377dae91f9feffd3d471050a5c15142a461653b3b1c4ba671d9c18761c90cc3"},
-]
-
-[package.extras]
-dev = ["maturin (==1.4.0)", "maturin[zig] (==1.4.0)", "pytest (==8.0.0)", "pyyaml (==6.0.1)"]
 
 [[package]]
 name = "pycryptodome"
@@ -774,13 +758,13 @@ files = [
 
 [[package]]
 name = "typing-extensions"
-version = "4.12.1"
+version = "4.12.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "typing_extensions-4.12.1-py3-none-any.whl", hash = "sha256:6024b58b69089e5a89c347397254e35f1bf02a907728ec7fee9bf0fe837d203a"},
-    {file = "typing_extensions-4.12.1.tar.gz", hash = "sha256:915f5e35ff76f56588223f15fdd5938f9a1cf9195c0de25130c627e4d597f6d1"},
+    {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
+    {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},
 ]
 
 [[package]]
@@ -803,4 +787,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "885c2689345285bad5ca79ba427b53884a6d867865413f492971e421b0f4f25f"
+content-hash = "0ead5896a6b9f81ef49c25f6cf4702317bdc5b52ea727eb6457fd0e59d1b49ae"
