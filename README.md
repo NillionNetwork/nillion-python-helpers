@@ -10,24 +10,13 @@ pip install nillion-python-helpers
 ```
 
 ### From Sources
-You can install the nada-algebra library using Poetry:
+You can install the `nillion-python-helpers` library using:
 
 ```bash
 git clone https://github.com/NillionNetwork/nillion-python-helpers.git
-pip3 install 
+pip install ./nillion-python-helpers
 ```
 
-## Usage
-
-The program contains a script that allows for the execution of run-local-cluster without needing to have it in the specific directory. It will also create a `.env` file in the directory where executed.
-```bash
-bootstrap-local-environment
-```
-
-To kill the Nillion Devnet:
-```bash
-bootstrap-local-environment --kill
-```
 ## License
 
 This project is licensed under the Apache2 License. See the LICENSE file for details.
