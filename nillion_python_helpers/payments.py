@@ -5,7 +5,7 @@ from cosmpy.aerial.tx import Transaction
 from cosmpy.crypto.address import Address
 
 
-async def pay(
+async def get_quote_and_pay(
     client: nillion.NillionClient,
     operation: nillion.Operation,
     payments_wallet,
@@ -42,7 +42,7 @@ async def pay(
     return nillion.PaymentReceipt(quote, submitted_tx.tx_hash)
 
 
-async def quote(
+async def get_quote(
     client: nillion.NillionClient,
     operation: nillion.Operation,
     cluster_id,
