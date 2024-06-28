@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nillion-python-helpers"
-version = "0.2.2"
+version = "0.2.3"
 description = ""
 authors = ["José Cabrero-Holgueras <jose.cabrero@nillion.com>"]
 readme = "README.md"
