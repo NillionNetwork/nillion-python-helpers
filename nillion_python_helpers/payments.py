@@ -11,6 +11,7 @@ async def get_quote_and_pay(
     payments_wallet,
     payments_client,
     cluster_id,
+    memo: str | None = None,
 ) -> nillion.PaymentReceipt:
     """
     Initiates a payment for the specified operation using the Nillion client.
@@ -21,6 +22,7 @@ async def get_quote_and_pay(
         payments_wallet: The wallet to be used for the payment.
         payments_client: The client used to process the payment transaction.
         cluster_id: The cluster identifier for the Nillion network.
+        memo (str | None, optional): An optional memo to include with the transaction. Defaults to None.
 
     Returns:
         nillion.PaymentReceipt: The receipt of the payment containing the quote and transaction hash.
@@ -32,9 +34,12 @@ async def get_quote_and_pay(
     message = nillion.create_payments_message(quote, address)
     tx = Transaction()
     tx.add_message(message)
+
+    # Pass the memo parameter to prepare_and_broadcast_basic_transaction, default to an empty string if memo is None
     submitted_tx = prepare_and_broadcast_basic_transaction(
-        payments_client, tx, payments_wallet, gas_limit=1000000
+        payments_client, tx, payments_wallet, gas_limit=1000000, memo=memo
     )
+
     submitted_tx.wait_to_complete()
     print(
         f"Submitting payment receipt {quote.cost.total} unil, tx hash {submitted_tx.tx_hash}"
