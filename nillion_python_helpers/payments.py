@@ -111,7 +111,9 @@ def create_payments_config(chain_id, payments_endpoint, scheme="grpc"):
         NetworkConfig: The network configuration object.
     """
     if not payments_endpoint.startswith(("http://", "https://")):
-        print("Deprecation warning: payments_endpoint should start with http:// or https://")
+        print(
+            "Deprecation warning: payments_endpoint should start with http:// or https://"
+        )
         payments_endpoint = f"http://{payments_endpoint}"
 
     return NetworkConfig(
