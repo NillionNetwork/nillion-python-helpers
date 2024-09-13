@@ -98,20 +98,25 @@ async def pay_with_quote(
     return nillion.PaymentReceipt(quote, submitted_tx.tx_hash)
 
 
-def create_payments_config(chain_id, payments_endpoint):
+def create_payments_config(chain_id, payments_endpoint, scheme="grpc"):
     """
     Creates a network configuration for the payments client.
 
     Args:
         chain_id: The chain ID of the network.
-        payments_endpoint: The endpoint URL for the payments service.
+        payments_endpoint: The http or https endpoint URL for the payments service.
+        scheme: The scheme to use for the URL. Defaults to "grpc".
 
     Returns:
         NetworkConfig: The network configuration object.
     """
+    if not payments_endpoint.startswith(("http://", "https://")):
+        print("Deprecation warning: payments_endpoint should start with http:// or https://")
+        payments_endpoint = f"http://{payments_endpoint}"
+
     return NetworkConfig(
         chain_id=chain_id,
-        url=f"grpc+http://{payments_endpoint}/",
+        url=f"{scheme}+{payments_endpoint}/",
         fee_minimum_gas_price=0,
         fee_denomination="unil",
         staking_denomination="unil",
