@@ -1,6 +1,6 @@
 # Nillion Python Helpers
 
-This helpers are meant to be used with Nillion's Python Quickstart. This are meant not to be copied every time we need to include them in a separate project, as they have become the standard.
+These helpers are meant to be used with Nillion's Python Quickstart. These are meant not to be copied every time we need to include them in a separate project, as they have become the standard.
 
 ## Installation
 ### Using pip
